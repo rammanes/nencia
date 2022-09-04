@@ -86,16 +86,7 @@ class _NRegisterationPageState extends State<NRegisterationPage> {
                             SizedBox(
                               height: SizeConfig.defaultSize! * 2,
                             ),
-                            Align(
-                              alignment: Alignment.centerRight,
-                              child: InkWell(
-                                child: const Text(
-                                  'Forgot your password?',
-                                  style: TextStyle(color: Colors.grey),
-                                ),
-                                onTap: () {},
-                              ),
-                            ),
+
                             SizedBox(
                               height: SizeConfig.defaultSize! * 2,
                             ),
@@ -140,33 +131,6 @@ class _NRegisterationPageState extends State<NRegisterationPage> {
                             ),
                           ],
                         ),
-                      ),
-                    ),
-                  ),
-                ),
-                Center(
-                  child: Container(
-                    margin: EdgeInsets.only(top: SizeConfig.defaultSize! * 17),
-                    height: SizeConfig.defaultSize! * 5,
-                    width: SizeConfig.defaultSize! * 20,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          blurRadius: 6,
-                          offset: Offset(0, 1), // changes position of shadow
-                        ),
-                      ],
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Nencia',
-                        style: TextStyle(
-                            color: AppConstants.appPrimaryColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18),
                       ),
                     ),
                   ),

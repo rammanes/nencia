@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nencia/constants/size_config.dart';
+import 'package:nencia/screens/home/designer_home/create_post.dart';
 import 'package:nencia/screens/home/designer_home/vendor_cart_page.dart';
 import 'package:nencia/screens/home/home_widget/home_profile_container.dart';
 import 'package:nencia/screens/home/model/shop_details.dart';
@@ -69,6 +70,11 @@ class _DesignerHomeState extends State<DesignerHome> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: topBar,
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        Get.to(()=>CreatePost());
+      },
+        child: Icon(Icons.add),
+      ),
       body: Container(
         height: MediaQuery.of(context).size.height,
         child: Column(

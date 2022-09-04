@@ -14,19 +14,6 @@ class HomeReels extends StatelessWidget {
           fontWeight: FontWeight.bold
         ),
       ),
-      Row(
-        children: const [
-          Icon(Icons.play_arrow, color: AppConstants.appPrimaryColor,),
-          SizedBox(width: 5,),
-          Text(
-            "Watch all",
-            style: TextStyle(
-                color: AppConstants.appPrimaryColor,
-                fontSize: 16,
-            ),
-          ),
-        ],
-      )
     ],
   );
   final stories = Expanded(
@@ -38,15 +25,8 @@ class HomeReels extends StatelessWidget {
             const SizedBox(height: 10,),
             Stack(
               alignment: Alignment.bottomRight,
-              children: [
-                const ProfileContainer(profileImage: 'img/shop3.jpg'),
-                index == 0 ? const Positioned(
-                    right: 10,
-                    child: CircleAvatar(
-                      radius: 10,
-                      backgroundColor: AppConstants.appPrimaryColor,
-                      child: Icon(Icons.add, color: AppConstants.appWhite, size: 14,),
-                    )) : Container(),
+              children: const [
+                ProfileContainer(profileImage: 'img/shop3.jpg'),
               ],
             ),
             const SizedBox(height: 5,),

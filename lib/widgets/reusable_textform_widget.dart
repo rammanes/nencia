@@ -4,7 +4,8 @@ import 'package:nencia/constants/app_color.dart';
 class ReUsableTextFormWidget extends StatelessWidget {
   final TextEditingController controller;
   final String text;
-  const ReUsableTextFormWidget({Key? key, required this.controller, required this.text}) : super(key: key);
+  int maxLine;
+  ReUsableTextFormWidget({Key? key, required this.controller, required this.text, this.maxLine = 1}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +13,7 @@ class ReUsableTextFormWidget extends StatelessWidget {
       height: 50,
       child: TextFormField(
         controller: controller,
+        maxLines: maxLine,
         textInputAction: TextInputAction.next, style: const TextStyle(color: Colors.black),
         decoration:  InputDecoration(
           labelText: text,

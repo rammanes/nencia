@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:nencia/constants/app_constants.dart';
 import 'package:nencia/constants/size_config.dart';
 import 'package:nencia/screens/cart/items_cart.dart';
 import 'package:nencia/screens/home/designer_home/review_page.dart';
@@ -166,6 +167,7 @@ class _ShopDetailsPageState extends State<ShopDetailsPage> {
                     ),
                   ],
                 ),
+               // List.generate(5, (index) => SizeContainer(productSize: "S"))
                 Row(
                   children: const [
                     SizeContainer(productSize: 'S',),
@@ -181,7 +183,7 @@ class _ShopDetailsPageState extends State<ShopDetailsPage> {
           //3rd Row
           Container(
             padding: const EdgeInsets.all(16),
-            height: SizeConfig.defaultSize! * 20,
+            height: SizeConfig.defaultSize! * 22,
             width: MediaQuery.of(context).size.width,
             color: Colors.white,
             child: Column(
@@ -192,7 +194,7 @@ class _ShopDetailsPageState extends State<ShopDetailsPage> {
                 Row(
                   children: const [
                     Text(
-                      "NGN 1,172.79 - 1,798.84",
+                      "NGN 1,172.79",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
                     )
@@ -201,18 +203,7 @@ class _ShopDetailsPageState extends State<ShopDetailsPage> {
                 SizedBox(
                   height: SizeConfig.defaultSize! * 1,
                 ),
-                Row(
-                  children: const [
-                    Text(
-                      "NGN 1,172.79 - 1,798.84",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 16,
-                          decoration: TextDecoration.lineThrough,
-                          color: Colors.grey),
-                    )
-                  ],
-                ),
+
                 SizedBox(
                   height: SizeConfig.defaultSize! * 1,
                 ),
@@ -223,6 +214,9 @@ class _ShopDetailsPageState extends State<ShopDetailsPage> {
                     letterSpacing: 0.6,
                   ),
                 ),
+                const SizedBox(height: 8,),
+                AppLargeText(text: "Delivery date"),
+                const SizedBox(height: 8,),
                 SizedBox(
                   height: SizeConfig.defaultSize! * 1,
                 ),

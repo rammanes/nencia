@@ -36,7 +36,6 @@ class _HomeListState extends State<HomeList> {
       InkWell(
         onTap: (){
           var initialLiterals = shopList[index];
-          //Get.to(()=> ShopDetailsPage(shopDetailsItems: DetailsItems(initialLiterals.postCardImageUrl, initialLiterals.shopName,initialLiterals.likeIcon,initialLiterals.viewCount, ),));
           Get.to(()=>DesignerHome());
         },
         child: Column(
@@ -141,33 +140,34 @@ class _HomeListState extends State<HomeList> {
                 ],
               ),
             ),
+            // if two customers that follows the same vendor like a content display the information to the other 
             //4th row
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16,5,16,5),
-              child: Text("Liked by rammanes",
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500
-                )
-              ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.fromLTRB(16,5,16,5),
+            //   child: Text("Liked by rammanes",
+            //     style: TextStyle(
+            //       fontSize: 14,
+            //       fontWeight: FontWeight.w500
+            //     )
+            //   ),
+            // ),
             //5th row
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16,5,16,5),
-              child: Row(
-                children: [
-                 ProfileContainer(profileImage: shopList[index].shopImageUrl, height: 20, width: 20,),
-                 const SizedBox(width: 10,),
-                  Expanded(child: TextField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "Add a comment...."
-                    ),
-                  ))
-
-                ],
-              ),
-            )
+            // Padding(
+            //   padding: const EdgeInsets.fromLTRB(16,5,16,5),
+            //   child: Row(
+            //     children: [
+            //      ProfileContainer(profileImage: shopList[index].shopImageUrl, height: 20, width: 20,),
+            //      const SizedBox(width: 10,),
+            //       Expanded(child: TextField(
+            //         decoration: InputDecoration(
+            //           border: InputBorder.none,
+            //           hintText: "Add a comment...."
+            //         ),
+            //       ))
+            //
+            //     ],
+            //   ),
+            // )
           ],
         ),
       ),
